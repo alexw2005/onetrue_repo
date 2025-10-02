@@ -1,0 +1,17 @@
+openapi: 3.0.3
+info:
+  title: OneTrue Authenticator API
+  version: 1.0.0
+paths:
+  /v1/registry:
+    get:
+      summary: List registry items (demo)
+      responses:
+        '200':
+          description: ok
+  /v1/scans:
+    post:
+      summary: Submit a scan (demo)
+      responses:
+        '201':
+          description: created

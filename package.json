@@ -1,0 +1,17 @@
+{
+  "name": "onetrue-monorepo",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "codegen": "ts-node tooling/scripts/codegen.ts"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0",
+    "typescript": "^5.6.0",
+    "ts-node": "^10.9.2"
+  }
+}

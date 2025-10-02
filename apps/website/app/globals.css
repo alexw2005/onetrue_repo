@@ -1,0 +1,5 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Optional: pull in UI package CSS tokens if you want */
+@import "@onetrue/ui/src/styles/index.css";

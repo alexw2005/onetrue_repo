@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Local SAM for marketplace-api
+Resources:
+  ItemsGet:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/items_get.handler
+      Runtime: python3.11
+      Events:
+        GetApi:
+          Type: Api
+          Properties:
+            Path: /v1/items
+            Method: get
+  OffersPost:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/offers_post.handler
+      Runtime: python3.11
+      Events:
+        PostApi:
+          Type: Api
+          Properties:
+            Path: /v1/offers
+            Method: post

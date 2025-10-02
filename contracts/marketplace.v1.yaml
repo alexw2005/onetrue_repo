@@ -1,0 +1,17 @@
+openapi: 3.0.3
+info:
+  title: OneTrue Marketplace API
+  version: 1.0.0
+paths:
+  /v1/items:
+    get:
+      summary: List items (demo)
+      responses:
+        '200':
+          description: ok
+  /v1/offers:
+    post:
+      summary: Create an offer (demo)
+      responses:
+        '201':
+          description: created

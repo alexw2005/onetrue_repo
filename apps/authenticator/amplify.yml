@@ -1,0 +1,19 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - corepack enable
+        - pnpm i --frozen-lockfile
+    build:
+      commands:
+        - pnpm --filter @onetrue/app-authenticator build
+  artifacts:
+    baseDirectory: apps/authenticator/.next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+      - apps/**/node_modules/**/*
+      - packages/**/node_modules/**/*

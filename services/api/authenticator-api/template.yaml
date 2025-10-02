@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Local SAM for authenticator-api
+Resources:
+  RegistryGet:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/registry_get.handler
+      Runtime: python3.11
+      MemorySize: 256
+      Timeout: 5
+      Events:
+        GetApi:
+          Type: Api
+          Properties:
+            Path: /v1/registry
+            Method: get
+  ScansPost:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/scans_post.handler
+      Runtime: python3.11
+      MemorySize: 256
+      Timeout: 5
+      Events:
+        PostApi:
+          Type: Api
+          Properties:
+            Path: /v1/scans
+            Method: post

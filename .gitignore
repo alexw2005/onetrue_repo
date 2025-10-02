@@ -1,0 +1,38 @@
+# Node / pnpm
+node_modules/
+
+# Next.js
+.next/
+out/
+*.log
+*.tsbuildinfo
+
+# AWS Amplify
+amplify/
+.amplify/
+amplify-meta.json
+awsconfiguration.json
+amplifyconfiguration.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# SAM / CDK
+.cdklocal/
+.cdk.staging/
+cdk.out/
+.sam/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env*
+!.env.example
