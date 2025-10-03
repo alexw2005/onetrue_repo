@@ -17,7 +17,8 @@ applications:
           - '**/*'
       cache:
         paths:
-          - node_modules/**/*
+          - ../../node_modules/**/*  # Cache root node_modules
+          - .next/cache/**/*
   
   - appRoot: apps/authenticator
     frontend:
@@ -36,7 +37,8 @@ applications:
           - '**/*'
       cache:
         paths:
-          - node_modules/**/*
+          - ../../node_modules/**/*
+          - .next/cache/**/*
   
   - appRoot: apps/marketplace
     frontend:
@@ -55,4 +57,5 @@ applications:
           - '**/*'
       cache:
         paths:
-          - node_modules/**/*
+          - ../../node_modules/**/*
+          - .next/cache/**/*
