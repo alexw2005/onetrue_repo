@@ -8,6 +8,7 @@ applications:
             - corepack enable
             - corepack prepare pnpm@latest --activate
             - pnpm install
+            - pnpm --filter @onetrue/ui build  # Build UI package first
         build:
           commands:
             - pnpm --filter @onetrue/app-website build
@@ -27,6 +28,7 @@ applications:
             - corepack enable
             - corepack prepare pnpm@latest --activate
             - pnpm install
+            - pnpm --filter @onetrue/ui build  # Build UI package first
         build:
           commands:
             - pnpm --filter @onetrue/app-authenticator build
@@ -46,6 +48,7 @@ applications:
             - corepack enable
             - corepack prepare pnpm@latest --activate
             - pnpm install
+            - pnpm --filter @onetrue/ui build  # Build UI package first
         build:
           commands:
             - pnpm --filter @onetrue/app-marketplace build
