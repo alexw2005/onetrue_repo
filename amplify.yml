@@ -12,7 +12,7 @@ applications:
           commands:
             - pnpm --filter @onetrue/app-website build
       artifacts:
-        baseDirectory: apps/website/.next
+        baseDirectory: .next
         files:
           - '**/*'
       cache:
