@@ -11,19 +11,16 @@ applications:
         build:
           commands:
             - pnpm --filter @onetrue/app-website build
-        postBuild:
-          commands:
-            - cp -r public .next/standalone/apps/website/ 2>/dev/null || true
-            - cp -r .next/static .next/standalone/apps/website/.next/ 2>/dev/null || true
-            - cp package.json .next/standalone/apps/website/ 2>/dev/null || true
-    artifacts:
-      baseDirectory: .next/standalone
-      files:
-        - '**/*'
-    cache:
-      paths:
-        - ../../node_modules/**/*
-        - .next/cache/**/*
+      artifacts:
+        baseDirectory: .
+        files:
+          - '.next/**/*'
+          - 'public/**/*'
+          - 'package.json'
+      cache:
+        paths:
+          - ../../node_modules/**/*
+          - .next/cache/**/*
   
   - appRoot: apps/authenticator
     frontend:
