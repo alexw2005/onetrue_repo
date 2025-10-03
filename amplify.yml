@@ -11,16 +11,17 @@ applications:
         build:
           commands:
             - pnpm --filter @onetrue/app-website build
+            - pnpm --filter @onetrue/app-website exec next export
       artifacts:
-        baseDirectory: .
+        baseDirectory: apps/website/out
         files:
-          - '.next/**/*'
-          - 'public/**/*'
-          - 'package.json'
+          - '**/*'
       cache:
         paths:
-          - ../../node_modules/**/*
-          - .next/cache/**/*
+          - .pnpm-store/**/*
+          - node_modules/**/*
+          - apps/**/node_modules/**/*
+          - packages/**/node_modules/**/*
   
   - appRoot: apps/authenticator
     frontend:
