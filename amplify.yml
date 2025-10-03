@@ -12,12 +12,12 @@ applications:
           commands:
             - pnpm --filter @onetrue/app-website build
       artifacts:
-        baseDirectory: .next
+        baseDirectory: .next/standalone/apps/website
         files:
           - '**/*'
       cache:
         paths:
-          - ../../node_modules/**/*  # Cache root node_modules
+          - ../../node_modules/**/*
           - .next/cache/**/*
   
   - appRoot: apps/authenticator
