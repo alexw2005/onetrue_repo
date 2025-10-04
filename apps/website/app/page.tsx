@@ -56,8 +56,8 @@ export default function Page() {
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <Feature title="Verify with Confidence" desc="Per-scan nonce + rules engine + signatures prevent replay and tampering." />
             <Feature title="Provenance & Ownership" desc="Track item history and transfer to the next owner with auditable records." />
-            <Feature title="Enterprise-Ready" desc="Cognito SSO, AWS WAF, CloudWatch/X-Ray, S3/CloudFront—built to scale." />
-          </div>
+            <Feature title="Enterprise-Ready" desc="Trusted security, reliability, and scale to support your business from pilot to global rollout."/>     
+           </div>
 
           <div className="mt-12">
             <h3 className="text-lg font-semibold">Where it fits</h3>
